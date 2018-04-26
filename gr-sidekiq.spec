@@ -13,6 +13,7 @@ BuildRequires:  boost-devel
 BuildRequires:  cppunit-devel
 BuildRequires:  gcc-c++ 
 BuildRequires:  cmake
+BuildRequires:  swig
 Requires:       boost-filesystem
 Requires:	boost-system
 
@@ -42,6 +43,9 @@ ldconfig
 %files
 %defattr(-,root,root,-)
 %doc README.md
-/usr/
+%{_libdir}/libgnuradio-sidekiq.so
+%{_libdir}/python2.7/site-packages/sidekiq
+%{_datadir}/gnuradio/grc/blocks/sidekiq_source_s.xml
+%{_includedir}/sidekiq/*
 
 %changelog
